@@ -134,9 +134,14 @@ const selectLanguage = (locale) => {
 
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + 0.5rem);
+  bottom: calc(100% + 0.5rem);
+  top: auto;
+  /* Align with ProfileMenu's fix: span the parent footer's width rather
+     than a fixed min-width + right:0, which would clip the same way in a
+     narrow sidebar footer. */
+  left: 0;
   right: 0;
-  min-width: 160px;
+  width: auto;
   background: white;
   border: 1px solid #e2e8f0;
   border-radius: 10px;

@@ -169,9 +169,14 @@ const handleLogout = () => {
 
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + 0.5rem);
+  bottom: calc(100% + 0.5rem);
+  top: auto;
+  /* Span the parent footer's own width instead of anchoring with a fixed
+     min-width + right:0, which pushed the menu's left edge past the narrow
+     sidebar footer and got clipped by the sidebar's overflow. */
+  left: 0;
   right: 0;
-  min-width: 280px;
+  width: auto;
   background: white;
   border: 1px solid #e2e8f0;
   border-radius: 10px;
